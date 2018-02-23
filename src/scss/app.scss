@@ -1,0 +1,1283 @@
+@import "./partials/variables";
+//bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/reboot";
+//fonts
+@import "./partials/fonts";
+//slick
+@import "./partials/slick";
+
+
+@-ms-viewport {
+
+  width: device-width;
+
+}
+
+@font-face {
+
+  font-family: slick;
+  src: url(../img/fonts/slick.eot);
+  src: url(../img/fonts/slick.eot?#iefix) format("embedded-opentype"), url(../img/fonts/slick.woff) format("woff"), url(../img/fonts/slick.ttf) format("truetype"), url(../img/fonts/slick.svg#slick) format("svg");
+  font-weight: 400;
+  font-style: normal
+
+}
+
+html{
+
+  font-size: 16px;
+
+}
+
+body {
+
+  background-position: top;
+  background-size: cover;
+  font-family: $primary-font-family;
+  height: auto;
+  width: 100vw;
+
+}
+
+header {
+
+  width: 100vw;
+
+}
+
+main {
+
+  color: $black;
+  max-width: 100vw;
+  padding: 0em 1.5rem;
+
+}
+
+a {
+
+  color: $color-primary;
+
+}
+
+a:hover {
+
+  color: darken($color-primary, 15%);
+
+}
+
+/* Headings */
+
+h1 {
+
+  color: $color-primary;
+  font-family: $secondary-font-familiy;
+  font-size: 4.5rem;
+  line-height: 0.9;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 900;
+  margin-top: 1rem;
+
+}
+
+h2 {
+
+  color: $color-secondary;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.25rem;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+h3 {
+
+  font-family: $secondary-font-familiy;
+  font-size: 9.5rem;
+  line-height: 0.85;
+  letter-spacing: 0.15rem;
+  opacity: 0.4;
+
+}
+
+h4 {
+
+  color: $main-text-color;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  text-align: left;
+
+}
+
+p {
+
+  color: $main-text-color;
+  font-size: 1.15rem;
+  font-weight: 200;
+  line-height: 1.25rem;
+  letter-spacing: 0.05rem;
+  text-align: justify;
+
+}
+
+ul,
+ol,
+li {
+
+  font-weight: 200;
+
+}
+
+/* Main navigation */
+
+.sr-nav {
+
+  border-bottom: solid 1px $gray-300;
+  critical: this;
+  min-height: 7rem;
+  padding: 2.25rem 2.5rem;
+
+  &__logo{
+
+    height: 3rem;
+    max-height: 3rem;
+    width: auto;
+
+  }
+
+  &__xs-dropdown-container{
+
+    justify-content: flex-end;
+    width: 100%;
+
+  }
+
+  &__dropdown-link{
+
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  a{
+
+    color: $color-primary;
+    text-decoration: none;
+
+  }
+
+  a:hover {
+
+    color: darken($color-primary, 15%);
+
+  }
+
+  &__item{
+
+    &--selected{
+
+      a{
+
+        color: black;
+        font-weight: 400
+
+      }
+
+    }
+
+  }
+
+  ul {
+
+    li {
+
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+
+    }
+
+    li:last-child{
+
+      margin-right: 0rem;
+
+    }
+
+  }
+
+  &__dropdown-item{
+
+    font-family: $primary-font-family;
+    font-weight: 200;
+    padding-left: 1rem;
+
+  }
+
+  &__dropdown-item.active{
+
+    background-color: $gray-200;
+
+  }
+
+  &__dropdown-item:hover{
+
+    background-color: $gray-200;
+
+  }
+
+}
+
+a.sr-btn {
+
+  background-color: $color-primary;
+  border-radius: 0.35rem;
+  color: $white;
+  display: inline-block;
+  letter-spacing: 0.25rem;
+  padding: 0.5em 1.5rem;
+  text-transform: uppercase;
+
+}
+
+a.sr-btn:hover {
+
+  background-color: #b30031;
+  color: $white;
+
+}
+
+.sr-section {
+
+  padding: 3rem 0rem;
+
+  &__decoration{
+
+    height: 13.5rem;
+    min-width: 21rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.11);
+    background-image: url("rolerijada-background.jpg");
+    background-color: $pink;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 2rem;
+
+  }
+
+}
+
+/* Sections */
+
+.hero {
+
+  background-color: $color-secondary;
+  background-image: url("rs-hero-image.jpg");
+  background-position: top;
+  background-size: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 38px 7px rgba(48, 48, 48, 0.45);
+  height: 36rem;
+  padding: 2rem 3rem;
+  margin: 2.5rem 0rem 0rem 0rem;
+
+  article {
+
+    height: 100%;
+
+    .row {
+
+      height: 100%;
+
+    }
+
+  }
+
+}
+
+.rs-counter{
+
+  color: $color-secondary;
+  font-family: $primary-font-family;
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 0.75rem 0rem 0rem 0rem;
+  font-weight: 200;
+  text-align: left;
+  text-transform: none;
+  line-height: 2.25rem;
+  letter-spacing: 0;
+
+
+}
+
+.about {
+
+  p {
+
+    text-align: justify;
+    padding-top: 1rem;
+
+  }
+
+}
+
+.gallery {
+
+  height: 31rem;
+  overflow: hidden;
+  padding: 4rem 2rem;
+
+  &__image{
+
+    height: 20rem;
+    overflow: hidden;
+    padding: 8px;
+
+    img {
+
+      max-height: auto;
+      width: 100%;
+
+    }
+
+  }
+
+  &__decoration-wrapper {
+
+    position: relative;
+    top: -2.5rem;
+
+  }
+
+  &__decoration {
+
+    border-radius: 0.75rem;
+    height: 25rem;
+    background-color: $color-secondary;
+    box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.11);
+    position: relative;
+    top: -22rem;
+    z-index: -200;
+
+  }
+
+  &__arrow {
+
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    background: $color-primary;
+    border-radius: 50%;
+    box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.11);
+
+    img {
+
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+    }
+
+    &--prev {
+
+      top: 45%;
+      left: -17px;
+
+    }
+
+    &--next {
+
+      top:45%;
+      right: -17px;
+
+    }
+
+  }
+
+}
+
+.video {
+
+  margin-bottom: 3rem;
+
+  &__title{
+
+    margin-bottom: 2rem;
+
+  }
+
+}
+
+.contact {
+
+  margin: 4rem 0rem 2rem 0rem;
+  background-image: url("2017-decoration.png");
+  background-position: bottom;
+  background-position-x: right;
+  background-repeat: no-repeat;
+
+  p {
+
+  text-align: left;
+  font-size: 1rem;
+
+  }
+
+  &__icon {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+  }
+
+  &__decoration{
+
+    &__image{
+
+      height: 13.5rem;
+      min-width: 21rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.11);
+      background-image: url("deco-image-2.jpg");
+      background-color: $pink;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0 2rem;
+
+    }
+
+  }
+
+}
+
+.news{
+
+  margin-bottom: 5rem;
+
+}
+
+.past-events{
+
+  height: 36rem;
+  margin: 2rem 0rem;
+  background-image: url("rolerijada-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.75rem;
+
+  h1{
+
+    text-align: left;
+
+  }
+
+  &__image{
+
+    width: 100%;
+
+  }
+
+  &__content{
+
+    display: flex;
+    flex-direction: column;
+    height: 28rem;
+    justify-content: flex-end;
+    padding: 3rem;
+
+  }
+
+}
+
+.winners{
+
+  &__text{
+
+    padding: 3rem;
+
+  }
+
+  &__image{
+
+    height: 28rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.11);
+
+  }
+
+}
+
+.partners{
+
+  min-height: 6rem;
+  padding: 1rem 2rem;
+
+  &__logo{
+
+    height: 8rem;
+    max-height: 8rem;
+    width: 100%;
+    border: 1px solid $ligh-gray;
+    border-radius: 1rem;
+    background-color: $white;
+    background-image: url("DeepRelief_Logo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 2rem;
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.08);
+
+    &--olimpija{
+
+      background-image: url("Olimpija.jpg");
+
+    }
+
+    &--unicredit{
+
+      background-image: url("Unicredit.jpg");
+
+    }
+
+    &--hayat{
+
+      background-image: url("Hayat.jpg");
+
+    }
+
+    &--rsarajevo{
+
+      background-image: url("RSarajevo.jpg");
+
+    }
+
+    &--avaz{
+
+      background-image: url("Dnevni-Avaz.jpg");
+
+    }
+
+  }
+
+}
+
+
+#sr-section-organization {
+  min-height: 6rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  background-image: url("2017-decoration.png");
+  background-position: bottom;
+  background-position-x: left;
+  background-repeat: no-repeat;
+}
+
+
+.sr-section-organisation_wrapper {
+  height: 100%;
+}
+
+.sr-section-organization_logo {
+
+  width: fit-content;
+  height: 8rem;
+  padding: 2rem;
+  border: 1px solid $ligh-gray;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+
+  img {
+
+    height: 100%;
+    max-height: 8rem;
+
+  }
+}
+
+
+
+.sr-footer {
+
+  background-color: $main-text-color;
+  background-image: url("Footer-Decoration.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  min-height: 6rem;
+  padding: 0em 2.5rem;
+
+  p {
+
+    color: $white;
+    margin: 0;
+    text-align: left;
+
+  }
+
+  ul {
+
+    text-align: right;
+    text-align: -webkit-right;
+
+    li {
+
+      width: fit-content;
+
+    }
+  }
+}
+
+
+//Media
+
+@media (max-width: 768px) {
+
+  html, body {
+
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+  }
+
+  main {
+
+    max-width: 100vw;
+    padding: 0rem;
+    overflow-x: hidden;
+
+  }
+
+  h1 {
+
+    font-size: 3rem;
+
+  }
+
+  h2 {
+
+    font-size: 1rem;
+
+  }
+
+  .hero__decoration {
+
+    margin-top: 2rem;
+
+  }
+
+  p {
+
+    font-size: 1rem;
+    line-height: 1.25rem;
+
+  }
+
+  ul,
+  ol,
+  li {
+
+    font-size: 1rem;
+
+  }
+
+  .sr-nav {
+
+    critical: this;
+    padding: 2.25rem 1rem;
+
+    ul {
+
+      width: auto;
+
+      li{
+
+        margin: 1rem 0rem;
+        flex-direction: column;
+
+      }
+
+    }
+
+    &__xs-dropdown-container{
+
+      padding: 2.25rem 0rem 0rem 0rem;
+      width: 100%;
+      align-items: center;
+
+    }
+
+    &__dropdown-link{
+
+      margin: 1rem 0rem;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+
+    &__dropdown-menu{
+
+      width: 50%;
+      margin-top: 1rem;
+
+    }
+
+    &__dropdown-item{
+
+      text-align: center;
+
+    }
+
+    &__btn{
+
+        margin-top: 0rem;
+
+    }
+
+    &__btn-sm{
+
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      button{
+
+        width: 50%;
+
+      }
+
+    }
+
+  }
+
+  .sr-section {
+
+    padding: 3rem 0rem 0rem 0rem;
+
+  }
+
+  .rs-counter{
+
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+
+  }
+
+  .about{
+
+    margin-bottom: 3rem;
+
+  }
+
+  .gallery {
+
+    height: 26rem;
+    overflow: hidden;
+    padding: 4rem 2rem;
+
+    &__image{
+
+      height: 20rem;
+      overflow: hidden;
+      padding: 8px;
+
+      img {
+
+        max-height: auto;
+        width: 100%;
+
+      }
+
+    }
+
+
+    &__decoration {
+
+      height: 21.5rem;
+
+    }
+
+    &__arrow {
+
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      z-index: 100;
+      background: $color-primary;
+      border-radius: 50%;
+      box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.11);
+
+      img {
+
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+      }
+
+      &--prev {
+
+        top: 35%;
+        left: -17px;
+
+      }
+
+      &--next {
+
+        top:35%;
+        right: -17px;
+
+      }
+
+    }
+
+  }
+
+  .slick-dots{
+
+    bottom: 33px;
+
+  }
+
+  .winners{
+
+    &__text{
+
+      padding: 3rem;
+
+    }
+
+    &__image{
+
+      width: 90%;
+      height: auto;
+
+    }
+
+  }
+
+
+
+
+  #sr-section-organization {
+    padding: 0rem 2rem 4rem 2rem;
+  }
+
+  #sr-section-partners {
+    padding: 1rem;
+  }
+
+  .sr-footer {
+
+    p {
+
+      font-size: 1.25rem;
+
+    }
+
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  html, body {
+
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+  }
+
+  main {
+
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 0rem 0.5rem;
+
+  }
+
+  h1 {
+
+    font-size: 2rem;
+    margin-top: 2rem;
+
+  }
+
+  h2 {
+
+    font-size: 1rem;
+
+  }
+
+  h4{
+
+    margin-top: 2rem;
+
+  }
+
+  p {
+
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding: 0rem;
+
+  }
+
+  ul,
+  ol,
+  li {
+
+    font-size: 1.25rem;
+
+  }
+
+  .sr-nav {
+
+    critical: this;
+    padding: 2.25rem 1rem;
+
+    ul {
+
+      width: auto;
+      margin: 0;
+
+      li {
+
+        margin: 1rem 0rem;
+        flex-direction: column;
+
+      }
+
+    }
+
+    &__xs-dropdown-container {
+
+      padding: 2.25rem 0rem 0rem 0rem;
+      width: 100%;
+      align-items: center;
+
+    }
+
+    &__dropdown-menu {
+
+      width: 100%;
+      margin-top: 1rem;
+
+    }
+
+    &__dropdown-item {
+
+      text-align: center;
+
+    }
+
+    &__dropdown-link {
+
+      margin: 1rem 0rem;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+    }
+
+    &__btn-sm {
+
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin: 0rem;
+
+      button {
+
+        width: 100%;
+
+      }
+
+    }
+
+    #sr-section-gallery {
+
+      height: 27rem;
+      padding: 4rem 2rem;
+
+      .gallery-arrow {
+
+        &--prev, &--next {
+
+          top: 41%;
+
+        }
+
+      }
+
+    }
+
+    .sr-section-gallery_decoration-wrapper {
+      padding: 0rem 1rem;
+    }
+
+    .sr-section-gallery_decoration {
+
+      top: -18rem;
+      height: 21rem;
+
+    }
+
+    #sr-section-organization {
+      background-size: contain;
+    }
+
+    #sr-section-partners {
+      padding: 1rem 2rem;
+    }
+
+    .hero {
+
+      critical: this;
+      padding: 1rem;
+
+    }
+
+    .hero__decoration {
+
+      margin-top: 2rem;
+
+    }
+
+    .rs-counter{
+
+      font-size: 1.25rem;
+
+    }
+
+
+    .about {
+
+      padding: 1rem 0rem 0rem 0rem;
+
+    }
+
+    .sr-section-gallery_decoration-wrapper {
+      top: -3rem;
+    }
+
+    .sr-section-winners_image {
+      display: none;
+    }
+
+    #sr-section-organization {
+      padding: 0rem 2rem;
+    }
+
+    .sr-section-organization_decoration {
+      padding: 0rem 1rem;
+    }
+
+    .sr-section-organisation_logo-wrapper {
+      margin-top: 3rem;
+    }
+
+    .sr-section-winners_text {
+      padding: 0rem 3rem 0rem 3rem;
+    }
+
+    #sr-section-partners {
+      padding: 2.5rem 2rem 1rem 2rem;
+    }
+
+    .sr-footer {
+      padding: 1rem 2rem;
+
+      div {
+        width: max-content;
+        height: max-content;
+      }
+    }
+  }
+
+  .hero{
+
+    padding: 1rem 2rem;
+
+  }
+
+  .about{
+
+    padding: 1rem 0rem 0rem 0rem;
+    margin-bottom: 2rem;
+
+  }
+
+  .gallery {
+
+    height: 26rem;
+    padding: 2.5rem 2rem;
+
+    &__decoration-wrapper {
+
+      top: 0.75rem;
+
+    }
+
+    &__arrow {
+
+      &--prev {
+
+        top: 43%;
+        left: -17px;
+
+      }
+
+      &--next {
+
+        top: 43%;
+        right: -17px;
+
+      }
+
+    }
+  }
+
+  .news{
+
+    margin-bottom: 3rem;
+
+  }
+
+  .contact{
+
+    margin: 1rem 0rem 2rem 0rem;
+
+    &__title{
+
+      margin-bottom: 2rem;
+
+    }
+
+    &__icon{
+
+      width: 30%;
+
+    }
+
+    &__data{
+
+      width: 70%;
+
+    }
+
+    &__decoration{
+
+      margin-top: 1rem;
+
+    }
+
+  }
+
+  .sr-section-organization_logo{
+
+    margin: 2rem 0rem 1rem 0rem;
+
+  }
+
+  .past-events{
+
+    &__content:first-child{
+
+      height: 20rem;
+      padding: 0rem 3rem;
+
+    }
+
+    &__content:last-child{
+
+      height: 8rem;
+      padding: 0rem 3rem 3rem 3rem;
+
+    }
+
+  }
+
+  .winners{
+
+    &__text{
+
+      padding: 3rem 1rem;
+
+    }
+
+    &__image{
+
+      display: none;
+
+    }
+
+  }
+
+  .sr-footer{
+
+    text-align: left;
+
+    &__credits{
+
+      width: 70%;
+
+    }
+
+    &__social{
+
+      width: 30%;
+
+    }
+
+  }
+
+}
+
+@media (min-width: 1366px){
+
+.sr-nav{
+
+  padding: 2.25rem 10rem;
+
+}
+
+main{
+
+  padding: 0 9rem;
+
+}
+
+}
